@@ -1,0 +1,116 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: var(--primary-text-color-theme-light);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-duration: var(--time-activate);
+
+}
+.mobile-menu.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-duration: var(--time-activate);
+}
+.mobile-menu__container {
+  position: relative;
+  padding-left: 40px;
+}
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  line-height: 0;
+}
+.mobile-menu__close-icon{
+    transition-duration: var(--time-activate);
+    .mobile-menu__close-btn:hover &, 
+    .mobile-menu__close-btn:focus &{
+        fill: var(--accent-color);
+    }
+
+}
+.mobile-menu__list {
+  padding-top: 48px;
+}
+.mobile-menu__item {
+  margin-bottom: 32px;
+}
+.mobile-menu__link {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-dark-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.accent {
+  color: var(--accent-color);
+  // &::after {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   top: 52.2px;
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 4px;
+  //   background-color: var(--accent-color);
+  //   border-radius: 2px;
+  // }
+}
+.mobile-menu__contact {
+  margin-top: 302px;
+  margin-bottom: 64px;
+}
+.mobile-menu__contact-item {
+  margin-bottom: 32px;
+}
+.mobile-menu__contact-phone {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.mobile-menu__contact-mail {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color-theme-light);
+}
+.mobile-menu__contact-list {
+  display: flex;
+  align-items: center;
+}
+.mobile-menu__contact-items {
+    margin-left: 20px;
+
+}
+.mobile-menu__contact-network {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
