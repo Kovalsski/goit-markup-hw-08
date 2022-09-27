@@ -6,16 +6,16 @@
   height: 100%;
   z-index: 100;
   background-color: var(--primary-text-color-theme-light);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   transition-duration: var(--time-activate);
 
 }
-.mobile-menu.is-open{
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+.is-open{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition-duration: var(--time-activate);
 }
 .mobile-menu__container {

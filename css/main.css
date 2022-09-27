@@ -368,16 +368,16 @@ body {
   height: 100%;
   z-index: 100;
   background-color: var(--primary-text-color-theme-light);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition-duration: var(--time-activate);
-}
-
-.mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transition-duration: var(--time-activate);
+}
+
+.is-open {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition-duration: var(--time-activate);
 }
 
@@ -618,26 +618,13 @@ body {
   background-color: var(--no-name-text-color);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../sekt.jpg);
-  background-size: 1600px;
-  background-position: center;
-}
-
-.modals__page {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--primary-text-color-theme-light);
-  margin-bottom: 40px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mobile/hero-img.png);
 }
 
 .modals {
   display: flex;
   flex-wrap: wrap;
-  width: 700px;
+  width: 480px;
   justify-content: center;
   padding-top: 200px;
   padding-bottom: 200px;
