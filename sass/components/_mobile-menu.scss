@@ -100,6 +100,14 @@
   align-items: center;
 }
 .mobile-menu__contact-items {
+  &:not(:last-child)::after {     
+    height: 22px;
+    width: 1px;
+    position: absolute;
+    content: "";
+    background-color:  rgba(33, 33, 33, 0.2);
+    transform: translate(10px,0);
+  }
     margin-left: 20px;
 
 }
@@ -111,6 +119,5 @@
   letter-spacing: 0.02em;
   color: var(--accent-color);
 
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
+
 }
