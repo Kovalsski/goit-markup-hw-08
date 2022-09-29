@@ -1,4 +1,8 @@
-.job {
+.page-job{
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .job {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -8,6 +12,7 @@
   }
   
   .page-job {
+    display: block;
     padding-top: 0;
   }
   .job-page {
@@ -40,4 +45,4 @@
     line-height: 1.14;
     text-transform: uppercase;
   }
-  
+}  

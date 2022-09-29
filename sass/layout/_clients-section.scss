@@ -11,11 +11,12 @@
   }
   .clients__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
   
   .clients__item {
-    width: 170px;
+    width: 210px;
     height: 92px;
   }
   .clients__link {
@@ -43,4 +44,26 @@
     .clients__link:focus & {
       fill: var(--accent-color);
     }
+  }
+  @media screen and (max-width:479px) {
+    .clients__item {
+      width: 100%;
+    }
+    .clients{
+      padding-left: auto;
+      padding-right: auto;
+
+    }
+    
+  }
+  @media screen and (min-width:768px) {
+    .clients__item {
+      width: 226px;
+    }
+  }
+  @media screen and (min-width:1200px) {
+    .clients__item {
+      width: 170px;
+    }
+
   }

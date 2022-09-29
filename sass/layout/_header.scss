@@ -36,14 +36,16 @@
       }
   .page-header {
   border-bottom: 1px solid var(--border-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 29px;
+  padding-bottom: 27.5px;
   }
   .header-box {
   display: flex;
   justify-content: space-between;
   }
-
+.mail__item{
+  margin-bottom: 10px;
+}
   .menu__item:not(:last-child),
   .logo {
     margin-right: 50px;
@@ -143,7 +145,13 @@
     display: flex;
     justify-content: center;
   }
-  
+  .mail__item{
+    margin-bottom: 0;
+  }
+  .page-header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    }
 }
 
 // 
