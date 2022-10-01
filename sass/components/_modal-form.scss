@@ -1,7 +1,7 @@
 .modal-form__title {
     font-family: var(--primary-font);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.15;
     text-align: center;
     color: var(--primary-text-dark-color);
@@ -89,14 +89,14 @@
     margin-bottom: 30px;
     font-family: var(--primary-font);
     font-weight: 400;
-    font-size: 8px;
+    font-size: 9px;
     line-height: 1.71;
     color: var(--second-icon-color);
   }
   .check-box__policy {
     font-family: var(--primary-font);
     font-weight: 400;
-    font-size: 8px;
+    font-size: 9px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
@@ -156,6 +156,9 @@
 @media screen and (min-width:480px) {
   .check-box__policy {
     font-size: 12px;
+  }
+  .modal-form__title {
+    font-size: 20px;
   }
   .modal-form-check__field {
     font-size: 12px;

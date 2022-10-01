@@ -6,7 +6,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px 40px;
+  padding: 25px 25px;
 }
   .modal-close__btn {
     position: absolute;
@@ -31,13 +31,8 @@
   }
 @media screen and (min-width:480px) {
   .modal {
-    position: absolute;
     height: 609px;
     width: 450px;
-    background-color: var(--primary-text-color-theme-light);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 40px 40px;
   }
 }
