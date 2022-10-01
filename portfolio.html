@@ -13,41 +13,80 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
+
 <body>
   <header class="page-header">
-    <div class="header-box container">
-      <nav class="page-navigation">
-        <a class="logo link" href="/index.html"><span class="logo-item">Web</span>Studio</a>
-        <ul class="menu list">
-          <li class="menu__item">
-            <a class="menu__link link" href="index.html">Студія</span></a>
+    <div class="container">
+      <div class="header-box">
+        <nav class="page-navigation">
+          <a class="logo link" href="/index.html"><span class="logo-item">Web</span>Studio</a>
+          <ul class="menu list">
+            <li class="menu__item">
+              <a class="menu__link link" href="index.html">Студія</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="portfolio.html"><span class="accent">Портфоліо</span></a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="#contacts">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="open-mobile-menu-btn" data-menu-open>
+          <svg class="open-mobile-menu__icon" width="40px" height="40px">
+            <use href="./symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <ul class="list-contact list">
+          <li class="mail__item page-cont">
+            <a class="mail__link link focus-cont" href="mailto:info@devstudio.com">
+              <svg class="mail__icon cont-icon" width="16px" height="12px">
+                <use href="./symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link link" href="portfolio.html"><span class="accent"></span>Портфоліо</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link link" href="#contacts">Контакти</a>
+          <li class="phone__item page-cont">
+            <a class="phone__link link focus-cont" href="tel:+380961111111">
+              <svg class="phone__icon cont-icon" width="10" height="16">
+                <use href="./symbol-defs.svg#icon-Vector"></use>
+              </svg>
+              +38 096 111 11 11</a>
           </li>
         </ul>
-      </nav>
-
-      <ul class="list-contact list">
-        <li class="mail__item page-cont">
-          <a class="mail__link link focus-cont" href="mailto:info@devstudio.com">
-            <svg class="mail__icon cont-icon" width="16px" height="12px">
-              <use href="./symbol-defs.svg#icon-envelope"></use>
+      </div>
+      <div class="mobile-menu is-open" data-menu>
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40px" height="40px">
+              <use href="./symbol-defs.svg#icon-close"></use>
             </svg>
-            info@devstudio.com
-          </a>
-        </li>
-        <li class="phone__item page-cont">
-          <a class="phone__link link focus-cont" href="tel:+380961111111">
-            <svg class="phone__icon cont-icon" width="10" height="16">
-              <use href="./symbol-defs.svg#icon-Vector"></use>
-            </svg>
-            +38 096 111 11 11</a>
-        </li>
-      </ul>
+          </button>
+          <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item"><a class="mobile-menu__link link" href="index.html">Студія</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link link" href="portfolio.html"><span
+                  class="accent">Портфоліо</span></a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#contacts">Контакти</a></li>
+          </ul>
+          <ul class="mobile-menu__contact list">
+            <li class="mobile-menu__contact-item"><a class="mobile-menu__contact-phone link"
+                href="tel:+380961111111">+38 096 111 11 11</a></li>
+            <li class="mobile-menu__contact-item"><a class="mobile-menu__contact-mail link"
+                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          </ul>
+          <ul class="mobile-menu__contact-list list">
+            <li class="mobile-menu__contact-items"><a class="mobile-menu__contact-network link"
+                href="https://www.instagram.com/">Instagram</a></li>
+            <li class="mobile-menu__contact-items"><a class="mobile-menu__contact-network link"
+                href="https://twitter.com">Twitter</a></li>
+            <li class="mobile-menu__contact-items"><a class="mobile-menu__contact-network link"
+                href="https://www.facebook.com/">Facebook</a></li>
+            <li class="mobile-menu__contact-items"><a class="mobile-menu__contact-network link"
+                href="https://ua.linkedin.com/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
   <main class="main-page">
@@ -65,14 +104,25 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-1.jpg" alt="Технокряк">
+                  <picture>
+                    <source
+                      srcset="./images2/portfolio/laptop-screen_desktop.jpg 1x, ./images2/portfolio/laptop-screen_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source
+                      srcset="./images2/portfolio/laptop-screen_tablet.jpg 1x, ./images2/portfolio/laptop-screen_tablet@2x.jpg"
+                      media="(min-width:768px)">
+                    <source
+                      srcset="./images2/portfolio/laptop-screen_mobile.jpg 1x, ./images2/portfolio/laptop-screen_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/laptop-screen_mobile.jpg" alt="Технокряк" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
                     чи
                     приватну особу.</p>
                 </div>
-                <div class="project-box">
+                <div class="project-box height-box">
                   <h2 class="project-box__title">Технокряк</h2>
                   <p class="project-box__type">Веб-сайт</p>
                 </div>
@@ -84,15 +134,26 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-2.jpg"
-                    alt="Постер-New-Orlean-vs-Golden-Star">
+                  <picture>
+                    <source
+                      srcset="./images2/portfolio/players_desktop.jpg 1x, ./images2/portfolio/players_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source
+                      srcset="./images2/portfolio/players_tablet.jpg 1x, ./images2/portfolio/players_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source
+                      srcset="./images2/portfolio/players_mobile.jpg 1x, ./images2/portfolio/players_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/players_mobile.jpg"
+                      alt="Постер-New-Orlean-vs-Golden-Star" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
                     чи
                     приватну особу.</p>
                 </div>
-                <div class="project-box">
+                <div class="project-box height-box">
                   <h2 class="project-box__title">Постер New Orlean vs Golden Star</h2>
                   <p class="project-box__type">Дизайн</p>
                 </div>
@@ -104,7 +165,19 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-3.jpg" alt="Ресторан-Морепродукти">
+                  <picture>
+                    <source
+                      srcset="./images2/portfolio/restaurant_desktop.jpg 1x, ./images2/portfolio/restaurant_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source
+                      srcset="./images2/portfolio/restaurant_tablet.jpg 1x, ./images2/portfolio/restaurant_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source
+                      srcset="./images2/portfolio/restaurant_mobile.jpg 1x, ./images2/portfolio/restaurant_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/players_mobile.jpg"
+                      alt="Ресторан-Морепродукти" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
@@ -121,7 +194,18 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-4.jpg" alt="Проєкт-Прем'єр">
+                  <picture>
+                    <source
+                      srcset="./images2/portfolio/headphones_desktop.jpg 1x, ./images2/portfolio/headphones_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source
+                      srcset="./images2/portfolio/headphones_tablet.jpg 1x, ./images2/portfolio/headphones_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source
+                      srcset="./images2/portfolio/headphones_mobile.jpg 1x, ./images2/portfolio/headphones_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/headphones_mobile.jpg" alt="Проєкт-Прем'єр" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
@@ -140,7 +224,16 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-5.jpg" alt="Проєкт-Коробки">
+                  <picture>
+                    <source
+                      srcset="./images2/portfolio/boxes_desktop.jpg 1x, ./images2/portfolio/boxes_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source srcset="./images2/portfolio/boxes_tablet.jpg 1x, ./images2/portfolio/boxes_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source srcset="./images2/portfolio/boxes_mobile.jpg 1x, ./images2/portfolio/boxes_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/boxes_mobile.jpg" alt="Проєкт-Коробки" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
@@ -157,7 +250,19 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-6.jpg" alt="Натхнення-не-має-кордонів">
+                  <picture>
+                    <source
+                      srcset="./images2/portfolio/screen_desktop.jpg 1x, ./images2/portfolio/screen_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source
+                      srcset="./images2/portfolio/screen_tablet.jpg 1x, ./images2/portfolio/screen_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source
+                      srcset="./images2/portfolio/screen_mobile.jpg 1x, ./images2/portfolio/screen_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/screen_mobile.jpg"
+                      alt="Натхнення-не-має-кордонів" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
@@ -174,7 +279,16 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-7.jpg" alt="Видання-Обмежене-видання">
+                  <picture>
+                    <source srcset="./images2/portfolio/book_desktop.jpg 1x, ./images2/portfolio/book_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source srcset="./images2/portfolio/book_tablet.jpg 1x, ./images2/portfolio/book_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source srcset="./images2/portfolio/book_mobile.jpg 1x, ./images2/portfolio/book_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/book_mobile.jpg"
+                      alt="Видання-Обмежене-видання" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
@@ -191,7 +305,15 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-8.jpg" alt="Проєкт-ЛАБ">
+                  <picture>
+                    <source srcset="./images2/portfolio/tag_desktop.jpg 1x, ./images2/portfolio/tag_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source srcset="./images2/portfolio/tag_tablet.jpg 1x, ./images2/portfolio/tag_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source srcset="./images2/portfolio/tag_mobile.jpg 1x, ./images2/portfolio/tag_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/tag_mobile.jpg" alt="Проєкт-ЛАБ" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
@@ -208,7 +330,18 @@
           <li class="project__list"><a href="" class="project__link">
               <div class="project__cont">
                 <div class="project__text">
-                  <img class="pjoject__img" src="./images-portfolio/img-portholio-9.jpg" alt="Зростаючий-бізнес">
+                  <picture>
+                    <source
+                      srcset="./images2/portfolio/printing_desktop.jpg 1x, ./images2/portfolio/printing_desktop@2x.jpg 2x"
+                      media="(min-width:1200px)">
+                    <source
+                      srcset="./images2/portfolio/printing_tablet.jpg 1x, ./images2/portfolio/printing_tablet@2x.jpg 2x"
+                      media="(min-width:768px)">
+                    <source
+                      srcset="./images2/portfolio/printing_mobile.jpgg 1x, ./images2/portfolio/printing_mobile@2x.jpg 2x"
+                      media="(max-width:767px)">
+                    <img class="project__img" src="./images2/portfolio/printing_mobile.jpg" alt="Зростаючий-бізнес" />
+                  </picture>
                   <p class="overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                     та
                     сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію
@@ -280,20 +413,21 @@
       <div class="subscribe">
         <p class="subscribe__title">Підпишіться на розсилку</p>
         <form class="subscribe-form">
-        <span class="subscribe-form__wrapper">
-          <label class="subscribe-form__field">
-              <input type="text" class="subscribe-form__input" name="user-mail" placeholder="E-mail">          
-          </label>
+          <div class="subscribe-form__box">
+            <label class="subscribe-form__field">
+              <input type="text" class="subscribe-form__input" name="user-mail" placeholder="E-mail">
+            </label>
+          </div>
           <button type="submit" class="subscribe-form__submit">Підписатися
             <svg class="subscribe-form__icon" width="24" height="24">
               <use href="./symbol-defs.svg#icon-send"></use>
             </svg>
           </button>
-        </span>
         </form>
       </div>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
