@@ -177,7 +177,7 @@ body {
 .modal {
   position: absolute;
   height: 581px;
-  width: 528px;
+  width: 450px;
   background-color: var(--primary-text-color-theme-light);
   top: 50%;
   left: 50%;
@@ -208,6 +208,18 @@ body {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    height: 609px;
+    width: 450px;
+    background-color: var(--primary-text-color-theme-light);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 40px;
+  }
+}
 .modal-form__title {
   font-family: var(--primary-font);
   font-weight: 700;
@@ -304,7 +316,7 @@ body {
   margin-bottom: 30px;
   font-family: var(--primary-font);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   color: var(--second-icon-color);
 }
@@ -312,7 +324,7 @@ body {
 .check-box__policy {
   font-family: var(--primary-font);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
@@ -720,64 +732,13 @@ body {
     flex-wrap: wrap;
     gap: 30px;
   }
-  .skills__item {
-    flex-basis: calc((100% - 90px) / 4);
-  }
-  .skills__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--grey-color);
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  .skills__text {
-    font-size: 14px;
-    line-height: 1.71;
-    color: var(--secondary-text-color-theme-light);
-  }
   .skills__box {
-    display: flex;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: var(--back-color);
-    margin-bottom: 30px;
     width: 354px;
-    height: 120px;
-    align-items: center;
   }
 }
 @media screen and (min-width: 1200px) {
-  .skills__list {
-    display: flex;
-    gap: 30px;
-  }
-  .skills__item {
-    flex-basis: calc((100% - 90px) / 4);
-  }
-  .sskills__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--grey-color);
-    margin-bottom: 10px;
-  }
-  .skills__text {
-    font-size: 14px;
-    line-height: 1.71;
-    color: var(--secondary-text-color-theme-light);
-  }
   .skills__box {
-    display: flex;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: var(--back-color);
-    margin-bottom: 30px;
     width: 270px;
-    height: 120px;
-    align-items: center;
   }
 }
 .page-job {
@@ -1088,6 +1049,12 @@ body {
   margin-bottom: 60px;
 }
 
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .subscribe__title {
   font-family: var(--primary-font);
   font-weight: 700;
@@ -1098,8 +1065,7 @@ body {
   margin-bottom: 20px;
 }
 
-.subscribe-form__wrapper {
-  display: block;
+.subscribe-form__box {
   margin-bottom: 20px;
 }
 
@@ -1132,8 +1098,6 @@ body {
   justify-content: center;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .subscribe-form__icon {
@@ -1142,6 +1106,11 @@ body {
   fill: var(--primary-text-color-theme-light);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .subscribe-form {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-container {
     display: flex;
@@ -1156,6 +1125,9 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .subscribe-form__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-container {
@@ -1166,6 +1138,9 @@ body {
   .contact {
     margin-right: 70px;
     margin-bottom: 0;
+  }
+  .subscribe-form {
+    flex-wrap: nowrap;
   }
   .subscribe-form__field {
     margin-right: 12px;
@@ -1178,6 +1153,15 @@ body {
   }
   .subscribe__title {
     text-align: left;
+  }
+  .subscribe-form__input {
+    width: 358px;
+  }
+  .subscribe-form__box {
+    margin-bottom: 0;
+  }
+  .invate {
+    margin-bottom: 0;
   }
 }
 .portfolio__list {
