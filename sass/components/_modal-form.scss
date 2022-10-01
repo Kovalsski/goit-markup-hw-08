@@ -89,14 +89,14 @@
     margin-bottom: 30px;
     font-family: var(--primary-font);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 1.71;
     color: var(--second-icon-color);
   }
   .check-box__policy {
     font-family: var(--primary-font);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
@@ -153,5 +153,20 @@
     background-color: #188ce8;
   }
   }
-
+@media screen and (min-width:480px) {
+  .check-box__policy {
+    font-size: 12px;
+  }
+  .modal-form-check__field {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .check-box__policy {
+    font-size: 14px;
+  }
+  .modal-form-check__field {
+    font-size: 14px;
+  }
+}
   
